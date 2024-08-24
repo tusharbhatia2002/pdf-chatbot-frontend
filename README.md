@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ChatBuddy - Frontend
 
-## Getting Started
+## Overview
+ChatBuddy is a user-friendly web application that allows users to upload PDF documents and interact with a chatbot. The chatbot can answer questions based on the content of the uploaded PDFs and survey data from a backend database.
 
-First, run the development server:
+## Features
+- **PDF Uploading**: Users can drag and drop PDF files or select them from their device.
+- **Chat Interface**: Users can interact with the chatbot, which provides responses based on the uploaded PDFs and survey data.
+- **Chat Suggestions**: Users receive suggestions for common queries to enhance their interaction experience.
+- **Responsive Design**: The application is designed to be responsive and user-friendly across devices.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technologies Used
+- **React**: For building the user interface.
+- **Next.js**: For server-side rendering and routing.
+- **Tailwind CSS**: For styling the application.
+- **Shadcn UI**: For pre-built UI components that enhance the design and user experience.
+- **Axios**: For making API calls to the backend.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
+1. Clone the repository:
+   git clone <repository-url>
+   cd frontend
+   
+3. Install dependencies:
+bash npm install
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Start the development server:
+bash npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+5. Open your browser and navigate to `http://localhost:3000`.
 
-## Learn More
+## Usage
+- **Upload PDFs**: Drag and drop a PDF file into the designated area or click to select a file.
+- **Interact with the Chatbot**: Use the chat interface to ask questions or click on suggestions to populate the input field.
+- **Receive Responses**: The chatbot will respond based on the content of the uploaded PDFs and survey data.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## API Integration
+The frontend communicates with the following backend APIs:
+- **POST /upload-pdf/**: Upload a PDF file.
+- **POST /chat/**: Send a message to the chatbot.
+- **POST /extract-key-points/**: Extract key points from a specified PDF.
+- **GET /pdf-files/**: Retrieve a list of uploaded PDFs.
+- **DELETE /delete-pdf/{filename}**: Delete a specified PDF.
